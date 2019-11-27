@@ -9,13 +9,14 @@
 <body>
     <div class="t2">
         <div class="container" id="t3">
-            <form class="form-group" method="post" action="{{route('clientes.save')}}">
+            <form class="form-group" method="post" action="{{route('clientes.store')}}">
                     {{ csrf_field() }}
                     </br><h2>Clientes</h2>
-                    <input type="text" name="nome" class="form-control" id="n1" placeholder="Digite seu nome" required></br>
+                    <!--<input type="text" name="id">-->
+                    <input type="text" name="name" class="form-control" id="n1" placeholder="Digite seu nome" required></br>
                     <input type="text" name="cpf" required="" placeholder="Digite o seu CPF" id="n2" class="form-control"><br>
-                    <input type="text" name="endereco" required="" placeholder="Digite o seu endereço" id="n3" class="form-control"><br>
-                    <input type="text" name="senha" required="" placeholder="Digite o seu telefone" id="n4" class="form-control"><br>
+                    <input type="text" name="address" required="" placeholder="Digite o seu endereço" id="n3" class="form-control"><br>
+                    <input type="text" name="telephone" required="" placeholder="Digite o seu telefone" id="n4" class="form-control"><br>
                     <button value="Acessar" id="color" class="btn4">Enviar</button>
             </form>
 		</div>

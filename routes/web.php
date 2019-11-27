@@ -26,5 +26,7 @@ Route::get('/produtos/{id?}', function($id = null) {
     return view("list-produtos");
 });
 
-Route::post('/clientes/save',['as'=>'clientes.save','uses'=>'clienteController@store']);
+Route::get('/clientes',['as'=>'clientes','uses'=>'clienteController@index']);
+Route::get('/clientes/store',['as'=>'clientes.store','uses'=>'clienteController@store']);
+Route::post('/clientes/store',['as'=>'clientes.store','uses'=>'clienteController@store']);
 

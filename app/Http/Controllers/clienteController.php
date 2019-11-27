@@ -18,6 +18,7 @@ class clienteController extends Controller
     }
     public function store(Request $request) {
         $cliente = new cliente;
+        //$cliente->id = $request->id;
         $cliente->name = $request->name;
         $cliente->cpf = $request->cpf;
         $cliente->address = $request->address;
@@ -28,7 +29,7 @@ class clienteController extends Controller
         //$cliente = $cliente->create(request->all());
         $cliente->save();
         //Cliente::create($cliente);
-        return redirect()->route('clientes')->with('message', 'Conta de cliente criada com sucesso!');
+        return redirect()->route('welcome2')->with('message', 'Conta de cliente criada com sucesso!');
     }
     public function show($id) {
         //
