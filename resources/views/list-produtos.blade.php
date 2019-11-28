@@ -9,12 +9,12 @@
 <body>
     <div class="t2" id="t3">
         <div class="container">
-            <form class="form-group" method="post" action="/produtos">
+            <form class="form-group" method="post" action="{{route('produtos.store')}}">
                     {{ csrf_field() }}
                     </br><h2>Produtos</h2>
-                    <input type="text" name="nome" class="form-control" id="n1" placeholder="Digite o nome do produto" required></br>
-                    <input type="text" name="cpf" required="" placeholder="Digite o preço da compra" id="n2" class="form-control"><br>
-                    <input type="text" name="endereco" required="" placeholder="Digite a data da entrada" id="n3" class="form-control"><br>
+                    <input type="text" name="name" class="form-control" id="n1" placeholder="Digite o nome do produto" required></br>
+                    <input type="text" name="price" required="" placeholder="Digite o preço da compra" id="n2" class="form-control"><br>
+                    <input type="text" name="entry_date" required="" placeholder="Digite a data da entrada" id="n3" class="form-control"><br>
                     <button value="Acessar" id="color" class="btn4">Cadastrar</button>
             </form>
 		</div>

@@ -5,6 +5,8 @@ Route::get('/', function() {
 });
 
 Route::resource('cliente','clienteController');
+Route::resource('produtos','produtosController');
+
 
 /*Route::post('/cliente',['uses'=>'clienteController@create']);
 

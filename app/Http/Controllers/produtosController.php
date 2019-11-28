@@ -11,22 +11,22 @@ class produtosController extends Controller
         $produtos2 = produtos::all();
         $total = produtos::all()->count();
         //$produtoss = produtos::orderBy('created_at', 'desc')->paginate(10);
-        return view('list-produtos2', compact('produtos2', 'total'));
+        return view('list-produtos', compact('produtos2', 'total'));
     }
     public function create() {
-        return view('include-produto');
+        return view('welcome');
     }
     public function store(Request $request) {
         $produtos = new produtos;
         $produtos->name = $request->name;
         $produtos->price = $request->price;
         $produtos->entry_date = $request->entry_date;
-        $produtos->id_produtos = $request->id_produtos;
-        $produtos->type = $request->type;
-        $produtos->value = $request->value;
+        //$produtos->id_produtos = $request->id_produtos;
+        //$produtos->type = $request->type;
+        //$produtos->value = $request->value;
         //$produtos = $produtos->create(request->all());
         $produtos->save();
-        return redirect()->route('produtos.index')->with('message', 'Conta de produtos criada com sucesso!');
+        //return redirect()->route('produtos.index')->with('message', 'Conta de produtos criada com sucesso!');
     }
     public function show($id) {
         //
