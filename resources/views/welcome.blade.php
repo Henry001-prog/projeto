@@ -9,7 +9,7 @@
 <body>
     <div class="t2">
         <div class="container" id="t3">
-            <form class="form-group" method="post" action="{{route('clientes.store')}}">
+            <form class="form-group" method="post" action="{{route('cliente.store')}}">
                     {{ csrf_field() }}
                     </br><h2>Clientes</h2>
                     <!--<input type="text" name="id">-->

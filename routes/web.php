@@ -4,7 +4,9 @@ Route::get('/', function() {
     return view('welcome');
 });
 
-Route::post('/cliente',['uses'=>'clienteController@create']);
+Route::resource('cliente','clienteController');
+
+/*Route::post('/cliente',['uses'=>'clienteController@create']);
 
 Route::post('/produtos',['uses'=>'produtosController@create']);
 
@@ -20,7 +22,7 @@ Route::post('/produtos',['uses'=>'produtosController@create']);
 /*Route::post('/cliente', function() {
     dd($_POST);
     return view("welcome2");
-});*/
+});
 
 Route::get('/produtos/{id?}', function($id = null) {
     return view("list-produtos");
@@ -28,5 +30,5 @@ Route::get('/produtos/{id?}', function($id = null) {
 
 Route::get('/clientes',['as'=>'clientes','uses'=>'clienteController@index']);
 Route::get('/clientes/store',['as'=>'clientes.store','uses'=>'clienteController@store']);
-Route::post('/clientes/store',['as'=>'clientes.store','uses'=>'clienteController@store']);
+Route::post('/clientes/store',['as'=>'clientes.store','uses'=>'clienteController@store']);*/
 

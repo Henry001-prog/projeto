@@ -29,7 +29,7 @@ class clienteController extends Controller
         //$cliente = $cliente->create(request->all());
         $cliente->save();
         //Cliente::create($cliente);
-        return redirect()->route('welcome2')->with('message', 'Conta de cliente criada com sucesso!');
+        //return redirect()->route('welcome2')->with('message', 'Conta de cliente criada com sucesso!');
     }
     public function show($id) {
         //
